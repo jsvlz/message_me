@@ -14,13 +14,20 @@
           <div class="ui floating dropdown icon button">
             <i class="dropdown icon"></i>
             <div class="menu">
-              <div class="item"><i class="edit icon"></i>Log out</div>
-              <div class="item"><i class="delete icon"></i>
-                <%= link_to login_path do %>
-                  <font color="black"> Log in </font>
-                <% end %>
-              </div>
-              <div class="item"><i class="hide icon"></i>Sign in</div>
+              <% if !logged_in? %>
+                <div class="item"><i class="edit icon"></i>
+                  <%= link_to login_path do %>
+                    <font color="black"> Log in </font>
+                  <% end %>
+                </div>
+                <div class="item"><i class="hide icon"></i>Sign up</div>
+              <% else %>
+                <div class="item"><i class="delete icon"></i>
+                  <%= link_to logout_path, class: "btn btn-xs btn-logout", method: :delete do %>
+                    <font color="black"> Log out </font>
+                  <% end %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
