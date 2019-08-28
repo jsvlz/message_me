@@ -28,6 +28,7 @@ gem 'jquery-rails'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
+gem 'redis'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -53,6 +54,10 @@ group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
+
+#group :production do
+
+#end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
