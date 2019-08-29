@@ -27,7 +27,7 @@ gem 'jquery-rails'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'hirb'
+
 gem 'redis'
 
 # Use ActiveStorage variant
@@ -40,8 +40,6 @@ gem 'redis'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.3.6'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
